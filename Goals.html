@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals - Skill Development Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="goal.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Skill Tracker</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="goals.html">Goals</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <a href="#login">Login</a>
+            <a href="#signup" class="signup-btn">Signup</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="goals-banner">
+            <h1>Your Goals</h1>
+            <p>Define your personal development goals and track your achievements.</p>
+        </section>
+
+        <section class="goal-creation">
+            <h2>Create a New Goal</h2>
+            <form id="goal-form">
+                <input type="text" id="goal-title" placeholder="Goal Title" required>
+                <textarea id="goal-description" placeholder="Goal Description" required></textarea>
+                <button type="submit">Add Goal</button>
+            </form>
+        </section>
+
+        <section class="goal-list">
+            <h2>Your Goals</h2>
+            <ul id="goals">
+                <!-- Goals will be dynamically added here -->
+            </ul>
+        </section>
+    </main>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

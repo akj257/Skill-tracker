@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #ff6f61, #ff3f31);
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+header .logo:hover {
+    color: #ff6f61;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    transition: color 0.3s, transform 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+header nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6f61;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+header .auth a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1em;
+    transition: color 0.3s;
+}
+
+header .auth a:hover {
+    color: #ff6f61;
+}
+
+header .signup-btn {
+    background-color: #ff6f61;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .signup-btn:hover {
+    background-color: #ff3f31;
+}
+
+/* Resources Banner Styles */
+main .resources-banner {
+    background: linear-gradient(to right, #007bff, #00c3ff);
+    color: #fff;
+    text-align: center;
+    padding: 4em 1em;
+    animation: fadeIn 2s;
+    margin-top: 70px;
+}
+
+main .resources-banner h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+    font-family: 'Poppins', sans-serif;
+    animation: textGlow 2s infinite;
+}
+
+main .resources-banner p {
+    font-size: 1.2em;
+}
+
+/* Resources List Section */
+main .resources-list {
+    padding: 2em 1em;
+    background-color: #fff;
+    background: linear-gradient(to right, #ffffff, #f7f7f7);
+    text-align: center;
+}
+
+main .resources-list h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    animation: slideIn 1s ease-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .resource-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+main .resource-card {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 1em);
+    max-width: calc(33.333% - 1em);
+    animation: slideUp 0.5s ease-in-out;
+}
+
+main .resource-card h3 {
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .resource-card p {
+    font-family: 'Roboto', sans-serif;
+}
+
+main .resource-card .learn-more {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+main .resource-card .learn-more:hover {
+    background-color: #ff3f31;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 1em 2em;
+    text-align: center;
+}
+
+footer .footer-links,
+footer .social-media {
+    margin: 1em 0;
+}
+
+footer .footer-links a,
+footer .social-media a {
+    text-decoration: none;
+    color: #ff6f61;
+    margin: 0 0.5em;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover,
+footer .social-media a:hover {
+    color: #ff3f31;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 40px #ff3f31;
+    }
+    100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff6f61, 0 0 40px #ff6f61, 0 0 50px #ff3f31;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .resource-cards {
+        flex-direction: column;
+    }
+
+    main .resource-card {
+        max-width: 90%;
+    }
+}

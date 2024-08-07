@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #ff6f61, #ff3f31);
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+header .logo:hover {
+    color: #ff6f61;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5em 1em;
+    transition: color 0.3s, transform 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+header nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6f61;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+header .auth a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1em;
+    transition: color 0.3s;
+}
+
+header .auth a:hover {
+    color: #ff6f61;
+}
+
+header .signup-btn {
+    background-color: #ff6f61;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .signup-btn:hover {
+    background-color: #ff3f31;
+}
+
+/* Contact Banner Styles */
+main .contact-banner {
+    background: linear-gradient(to right, #007bff, #00c3ff);
+    color: #fff;
+    text-align: center;
+    padding: 4em 1em;
+    animation: fadeIn 2s;
+    margin-top: 70px;
+}
+
+main .contact-banner h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+    font-family: 'Poppins', sans-serif;
+    animation: textGlow 2s infinite;
+}
+
+main .contact-banner p {
+    font-size: 1.2em;
+}
+
+/* Contact Info Section */
+main .contact-info {
+    padding: 2em 1em;
+    text-align: center;
+    background-color: #fff;
+    background: linear-gradient(to right, #ffffff, #f7f7f7);
+}
+
+main .contact-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    animation: slideIn 1s ease-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+main .contact-item {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 1em);
+    max-width: calc(33.333% - 1em);
+    animation: slideUp 0.5s ease-in-out;
+}
+
+main .contact-item h3 {
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .contact-item p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contact Form Section */
+main .contact-form {
+    padding: 2em 1em;
+    text-align: center;
+    background-color: #fff;
+    background: linear-gradient(to right, #ffffff, #f7f7f7);
+}
+
+main .contact-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    animation: slideIn 1s ease-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main .contact-form label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+
+main .contact-form input,
+main .contact-form textarea {
+    width: 100%;
+    padding: 0.75em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+main .contact-form input:focus,
+main .contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+main .contact-form button {
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2
+}
